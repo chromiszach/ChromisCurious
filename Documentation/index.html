@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Curious | Ghost Theme Documentation</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600" type="text/css" media="all">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all">
+
+</head>
+<body>
+    <div class="wrap">
+        <header class="site-header" role="banner">
+            <h1 class="site-title">Curious - Ghost Theme v1.0.4</h1>
+            <p class="site-description">Theme Documentation</p>
+        </header><!-- .site-header -->
+        <div id="main">
+            <div class="intro">
+                <p>First of all a huge thanks for purchasing this theme! If you have any questions that are not answered here, please feel free to email via our user page <a href="http://themeforest.net/user/justgoodthemes">here</a>. Thanks so much!</p>
+                <ul class="byline">
+                    <li><em>Email:</em> <a href="mailto:justgoodthemes@gmail.com">justgoodthemes@gmail.com</a></li>
+                    <li><em>Twitter:</em> <a href="https://twitter.com/justgoodthemes">@justgoodthemes</a></li>
+                </ul>
+            </div><!-- .intro -->
+            <div id="content" role="main">
+                <section>
+                    <h2 id="toc">Table of Contents</h2>
+                    <ol>
+                        <li><a href="#theme-info"><strong>Theme Information</strong></a>
+                            <ol>
+                                <li><a href="#keyfeatures">Key Features</a></li>
+                                <li><a href="#themestructure">Theme Structure</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="#gettingStarted"><strong>How to Upload a Theme to Your Ghost Blog</strong></a>
+                            <ol>
+                                <li><a href="#SelfHosted">Upload a Theme to Self Hosted Ghost</a></li>
+                                <li><a href="#Ghost.io">Upload a Theme to Ghost.io</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="#themeFeatures"><strong>Theme Features</strong></a>
+                            <ol>
+                                <li><a href="#Favicon">Favicon</a></li>
+                                <li><a href="#Navigation">Navigation</a></li>
+                                <li><a href="#StaticPages">Static Pages</a></li>
+                                <li><a href="#CoverImages">Cover Images</a></li>
+                                <li><a href="#IntroSection">Intro Section</a></li>
+                                <li><a href="#Subscribers">Subscribers</a></li>
+                                <li><a href="#SyntaxHighlighter">Syntax Highlighter</a></li>
+                                <li><a href="#ImageStyles">Image and Blockquote Styles</a></li>
+                                <li><a href="#DisqusComments">Disqus Comments</a></li>
+                                <li><a href="#Sidebar">Sidebar</a></li>
+                                <li><a href="#FooterWidgets">Footer Widgets</a></li>
+                                <li><a href="#SocialMediaLinks">Social Media Links (Footer)</a></li>
+                                <li><a href="#CopyrightInformation">Copyright Information (Footer)</a></li>
+                                <li><a href="#GoogleAnalytics">Google Analytics</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="#Support"><strong>Support</strong></a></li>
+                        <li><a href="#Updates"><strong>Updates</strong></a></li>
+                        <li><a href="#Credits"><strong>Credits</strong></a></li>
+                    </ol>
+                    <hr />
+                </section>
+                <section>
+
+                    <h2 id="theme-info">A. Theme Information</h2>
+                    <ul>
+                      <li>Name: <strong>Curious</strong></li>
+                      <li>Description: Responsive &amp; clean, magazine style <a href="https://ghost.org/">Ghost</a> theme</li>
+                      <li>Current Version: 1.0.4</li>
+                      <li>Released: 05/10/2015</li>
+                      <li>Creator: <a href="http://justgoodthemes.com">JustGoodThemes.com</a></li>
+                      <li><a href="https://ghost.org/">Ghost</a> version: 0.8.0</li>
+                    </ul>
+
+                    <h3 id="keyfeatures">1. Key Features</h3>
+                    <ul>
+                        <li>Mobile first &amp; fully responsive (wide, normal, narrow, mobile)</li>
+                        <li>Retina display ready – all icons are optimized for retina devices</li>
+                        <li>Clean, well commented code, easy to customize</li>
+                        <li>Cover images support</li>
+                        <li>Author page support (useful for multi authors)</li>
+                        <li>Tag page support</li>
+                        <li>Code syntax highlighter</li>
+                        <li>Disqus commenting</li>
+                        <li>Sharing post integration</li>
+                        <li>Social media icons</li>
+                        <li>Tag cloud and latest posts widgets</li>
+                        <li>Instagram feed</li>
+                        <li>Regular updates</li>
+                    </ul>
+
+                    <h3 id="themestructure">2. Theme Structure</h3>
+                    <p>Here's an overview of the theme file structure.</p>
+<pre><code>.
+├── /assets
+    ├── /css
+        ├── style.css
+    ├── /fonts
+        ├── fontawesome.eot
+        ├── fontawesome.svg
+        ├── fontawesome.ttf
+        ├── fontawesome.woff
+    ├── /images
+    ├── /js
+        ├── custom.js
+        ├── html5.js
+        ├── plugins.js
+    ├── favicon.ico
+├── /partials
+    ├── comments.hbs
+    ├── footer.hbs [Edit social links and copyright info here]
+    ├── header.hbs
+    ├── loop-archive.hbs
+    ├── loop.hbs
+    ├── navigation.hbs
+    ├── pagination.hbs
+    ├── sidebar.hbs [Add MailChimp form URL, edit about and contact info here]
+├── author.hbs
+├── default.hbs [Add Disqus shortname, Instagram user ID and access token here]
+├── home.hbs
+├── index.hbs
+├── package.json
+├── page.hbs
+├── post.hbs
+├── tag.hbs</code></pre>
+                    <hr />
+                </section>
+
+                <section>
+                    <h2 id="gettingStarted">B. How to Upload a Theme to Your Ghost Blog - <a href="#toc">top</a></h2>
+
+                    <h3 id="SelfHosted">1. Upload a Theme to Self Hosted Ghost</h3>
+                    <ul>
+                        <li><span>1.</span> Locate the theme directory within the download files. It can be found at <strong>theme/curious</strong>.</li>
+                        <li><span>2.</span> Login to FTP/SFTP of your blog, or the file browser of your provided hosting service.</li>
+                        <li><span>3.</span> Navigate to the <strong>/content/theme</strong> directory within your Ghost installation.</li>
+                        <li><span>4.</span> Upload the <strong>curious</strong> directory found in step one into the remote <strong>/content/theme</strong> directory.</li>
+                        <li><span>5.</span> Restart your Ghost service. The process for this will change dependent on your provider. If you are unaware how to restart the service please raise a support issue with your host.</li>
+                        <li><span>6.</span> Login to your Ghost admin panel. This can be found at <strong>yourdomain.com/ghost</strong>.</li>
+                        <li><span>7.</span> Navigate to the <strong>Settings > General</strong> tab.</li>
+                        <li><span>8.</span> In the <strong>Theme</strong> drop down, select the newly installed <strong>Curious</strong> theme. Click <strong>Save</strong> to save the theme changes.</li>
+                    </ul>
+
+
+                    <h3 id="Ghost.io">2. Upload a Theme to Ghost.io</h3>
+                    <ul>
+                        <li><span>1.</span> Login to your Ghost.org user panel. Visit <a href="https://ghost.org/">Ghost.org</a> and enter your login credentials.</li>
+                        <li><span>2.</span> From your Ghost(Pro) dashboard, select the <strong>Settings</strong> (“gear”) icon to the right of the “Write a Post” button on the blog you wish to upload the theme.</li>
+                        <li><span>3.</span> In your blog’s control panel, you can either “drag &amp; drop” curious theme zip file into the <strong>“Add a Theme”</strong> drop zone, or click on the drag &amp; drop zone to launch the traditional file upload prompt.</li>
+                        <li><span>4.</span> Upload the theme and <strong>Save All Blog Settings</strong>. You may have to activate the theme in your ghost admin panel.</li>
+                    </ul>
+
+                </section>
+
+                <section>
+                    <h2 id="themeFeatures">C. Theme Features - <a href="#toc">top</a></h2>
+
+                    <h3 id="Favicon">1. Favicon</h3>
+
+                    <p>To change the favicon, replace <strong>favicon.ico</strong> file located in the <strong>assets</strong> folder <strong>(Ghost/content/themes/curious/assets)</strong> of the theme.</p>
+
+                    <h3 id="Navigation">2. Navigation</h3>
+
+                    <p>You can add, edit, delete and reorder menu links on your Ghost blog, directly from the navigation tool within the blog admin area, located at <strong>/ghost/settings/navigation/</strong>.</p>
+
+                    <p><img src="assets/images/navigation.png" alt="navigation menu"/></p>
+
+                    <p>To include a static page on your navigation menu, first type the name of the page as you’d like it to appear on your menu in the label field.</p>
+
+                    <p><img src="assets/images/label-field.jpg" alt="label field"/></p>
+
+                    <p>Next, click inside the <strong>URL field</strong> of the menu item. The blog URL will auto-populate with http://yourdomain.com/. You will need to add in the page slug after the final <strong>/</strong>. Once satisfied with your page link, click the blue <strong>Save button</strong> to add the page to the navigation menu.</p>
+
+                    <h3 id="StaticPages">3. Static Pages</h3>
+
+                    <p>In order to create a static page you create a new post, just like you would any other post. Once you have opened up the new post, there is a cog wheel icon next to where it says "Save Draft" or "Update Post" depending on if you have published the post or not. Click on that cog, and check the "Turn this post into a static page" box. This will convert your post to a static page.</p>
+                    <p><img src="assets/images/staticpage.png" alt="static page"/></p>
+
+                    <h3 id="CoverImages">4. Cover Images</h3>
+
+                    <p>You can add cover images to all of your posts, static pages, tag and author pages. Open your post/page settings menu, drag and drop or locate the image on your computer, save it and you're all set.</p>
+
+                    <h3 id="IntroSection">5. Intro Section</h3>
+
+                    <p>The intro section is displayed on the homepage, right below the site navigation. You can edit the information displayed in the intro section in the <strong>home.hbs</strong> file located in the main theme folder <strong>(Ghost/content/themes/curious)</strong>. By default, the blog title, blog description, blog cover image and the "Subscribe" button are displayed. If the "Subscribers" feature is enabled in Ghost, the "Subscribe" button leads to the Ghost subscribe page. If not, the button leads to the RSS feed page.</p>
+
+                    <h3 id="Subscribers">6. Subscribers</h3>
+
+                    <p>In version 0.8.0 Ghost introduced the "Subscribers" feature. To enable this feature, visit <strong>yourblog.com/ghost/settings/labs/</strong> and tick the "Subscribers" checkbox. When the "Subscribers" feature in labs is enabled, the subscription form is displayed below the post content in the single post page, the optional Subscribe widget is displayed in the theme sidebar and the "Subscribe" button in the intro section of the homepage leads to the Ghost subscribe page.</p>
+
+                    <h3 id="SyntaxHighlighter">7. Syntax Highlighter</h3>
+
+                    <p><strong>Curious</strong> comes with Rainbow.js plugin to automatically syntax highlight code blocks in your posts. To make syntax highlighter work, just wrap the code in <code>&lt;pre&gt;&lt;code data-language="css"&gt;&lt;/code&gt;&lt;/pre&gt;</code> tags and change the value of "data-language" attribute to your code language. Supported languages include CSS, Html, JavaScript, Python, Ruby.</p>
+
+                    <h3 id="ImageStyles">8. Image and Blockquote Styles</h3>
+
+                    <p>When adding blockquotes and images to your posts and pages, you can use special CSS classes to create a more attractive flow of content.</p>
+                    <p>For instance, you can align your image left or right, by wrapping it in a <code>p</code> tag with the CSS class <code>alignleft</code> or <code>alignright</code> like this:</p>
+                    <pre><code>&lt;p class="alignleft"&gt;
+![alternative text](/content/images/2015/09/my_image.jpg)
+&lt;/p&gt;</code></pre>
+                    <pre><code>&lt;p class="alignright"&gt;
+![alternative text](/content/images/2015/09/my_image.jpg)
+&lt;/p&gt;</code></pre>
+                    <p>You can also make your image wider than the content by wrapping it in a <code>p</code> tag with the CSS class <code>full-width</code> like this:</p>
+                    <pre><code>&lt;p class="full-width"&gt;
+![alternative text](/content/images/2015/09/my_image.jpg)
+&lt;/p&gt;</code></pre>
+                    <p><code>alignleft</code> or <code>alignright</code> CSS classes can be applied to blockquotes as well. See an example below.</p>
+                    <pre><code>&lt;blockquote class="alignleft"&gt;
+&lt;p&gt;Good ideas never go out of style.&lt;/p&gt;
+&lt;/blockquote&gt;</code></pre>
+                    <pre><code>&lt;blockquote class="alignright"&gt;
+&lt;p&gt;Good ideas never go out of style.&lt;/p&gt;
+&lt;/blockquote&gt;</code></pre>
+                    
+                    <h3 id="DisqusComments">9. Disqus Comments</h3>
+
+                    <p><strong>Curious</strong> theme comes with Disqus commenting built-in, you just need to have a Disqus account (create it at <a href="https://disqus.com/">Disqus.com</a>). To enable commenting, you need to change the default Disqus account shortname "my_disqus_shortname" on line 19 in the <strong>default.hbs</strong> file located in the main theme folder <strong>(Ghost/content/themes/curious)</strong>.</p>
+
+<pre><code>disqus_shortname = 'my_disqus_shortname', // add your Disqus shortname</code></pre>
+
+                    <p>If you wish to disable commenting, just remove all comments related code in the <strong>comments.hbs</strong> file located in the <strong>partials</strong> folder <strong>(Ghost/content/themes/curious/partials)</strong> of the theme.</p>
+
+                    <h3 id="Sidebar">10. Sidebar</h3>
+
+                    <p>The theme sidebar contains Ghost subscription form, hardcoded text widgets and hardcoded MailChimp newsletter subscription form. The <strong>sidebar.hbs</strong> file is located in the <strong>partials</strong> folder <strong>(Ghost/content/themes/curious/partials)</strong> of the theme.</p>
+
+                    <h4>Text Widgets</h4>
+
+                    <p>You will find to hardcoded text widgets "About" and "Contacts" in the sidebar of the theme. To change the "About" widget information, edit the text on line 8 in the <strong>sidebar.hbs</strong> file located in the <strong>partials</strong> folder <strong>(Ghost/content/themes/curious/partials)</strong>. To change the "Contact" widget information, edit the text on line 28 in the <strong>sidebar.hbs</strong> file located in the <strong>partials</strong> folder <strong>(Ghost/content/themes/curious/partials)</strong>. If you do not need those widgets, simply delete the <code>aside</code> elements:</p>
+<pre><code>&lt;aside class="widget widget-text"&gt;
+  &lt;h2 class="widget-title"&gt;About {{@blog.title}}&lt;/h2&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+&lt;/aside&gt;&lt;!-- .widget --&gt;</code></pre>
+<pre><code>&lt;aside class="widget widget-text"&gt;
+  &lt;h2 class="widget-title"&gt;Contact&lt;/h2&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+  &lt;ul class="contacts"&gt;
+    &lt;li&gt;&lt;span class="icon icon-envelope" aria-hidden="true"&gt;&lt;/span&gt; blog[at]gmail.com&lt;/li&gt;
+    &lt;li&gt;&lt;span class="icon icon-map-marker" aria-hidden="true"&gt;&lt;/span&gt; 123 Some Street&lt;/li&gt;
+    &lt;li&gt;&lt;span class="icon icon-phone" aria-hidden="true"&gt;&lt;/span&gt; +123 112 23445&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/aside&gt;&lt;!-- .widget --&gt;</code></pre>
+
+                    <h4>Ghost Subscription Form</h4>
+
+                    <p>If you have enabled the <a href="#Subscribers">"Subscribers" feature</a> in labs, Ghost subscription form widget is displayed in the sidebar.</p>
+
+                    <h4>MailChimp Newsletter Subscription Form</h4>
+
+                    <p>If you want to integrate MailChimp newsletter subscription form, there is a hardcoded Mailchimp newsletter widget in the sidebar. To enable MailChimp newsletter subscriptions, you need your unique form action URL.</p>
+                    <p>To get the form action URL, first log in to your <a href="http://mailchimp.com/">MailChimp account</a>. From your account Dashboard, click <strong>Lists</strong> in the navigation menu. Find the list you want to connect to your website or <a href="http://kb.mailchimp.com/lists/growth/create-a-new-list">create a new list</a>. Click the drop-down menu next to your list and choose <strong>Signup forms</strong>. Select <strong>Embedded forms</strong>. On the <strong>Embedded forms</strong> page click <strong>Naked</strong>. Find the <strong>Copy/paste onto your site</strong> section and click anywhere in the box to select the code. Copy the code and paste it in a text editor. Find the form action URL, which is a unique URL that you need to link your website to MailChimp. Select the URL between the quotation marks after the code <code>action=</code>.</p>
+                    <p><img src="assets/images/formcode.png" alt="Embedded form code"/></p>
+                    <p>Copy that URL and paste it on line 16 in the <strong>sidebar.hbs</strong> file located in the <strong>partials</strong> folder <strong>(Ghost/content/themes/curious/partials)</strong>.
+                    </p>
+                    <p>If you use Ghost subsription or some other newsletter service and do not need MailChimp subscription form, simply delete the <code>aside</code> element:</p>
+<pre><code>&lt;aside class="widget widget-newsletter"&gt;
+  &lt;h2 class="widget-title"&gt;{{@blog.title}} Newsletter&lt;/h2&gt;
+  &lt;p&gt;Enter your email address to subscribe to this blog and receive notifications of new posts by email.&lt;/p&gt;
+  &lt;!-- Begin MailChimp Signup Form --&gt;
+  &lt;div id="mc_embed_signup"&gt;
+    &lt;form action="{{! Add your form action URL }}" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate&gt;
+      &lt;div id="mc_embed_signup_scroll"&gt;
+        &lt;label for="mce-EMAIL" class="screen-reader-text"&gt;Email Address&lt;/label&gt;
+        &lt;input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required&gt;
+        &lt;div class="clear"&gt;&lt;input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+  &lt;!--End mc_embed_signup--&gt;
+&lt;/aside&gt;&lt;!-- .widget --&gt;</code></pre>
+
+                    <h3 id="FooterWidgets">11. Footer Widgets</h3>
+
+                    <p>The theme footer widget area contains "Latest Posts", "Instagram" and "Tags" widgets. The <strong>footer.hbs</strong> file is located in the <strong>partials</strong> folder <strong>(Ghost/content/themes/curious/partials)</strong> of the theme.</p>
+
+                    <h4>Latest Posts Widget</h4>
+
+                    <p>There is currently no way to create a latest posts widget in Ghost. So for now we've implemented a temporary solution - the latest posts list is generated automatically from the RSS feed.</p>
+
+                    <p>The widget displays 5 posts by default, but you can change the number of posts on line 22 in the <strong>default.hbs</strong> file located in the main theme folder <strong>(Ghost/content/themes/curious)</strong>.</p>
+
+<pre><code>latest_posts_count = 5; // change the latest posts number</code></pre>
+
+                    <h4>Instagram Widget</h4>
+
+                    <p>To display Instagram photos you need to change the default <code>instagram_user_id</code> and <code>instagram_access_token</code> on lines 20, 21 in the <strong>default.hbs</strong> file located in the main theme folder <strong>(Ghost/content/themes/curious)</strong>.</p>
+
+<pre><code>instagram_user_id = '2372162651',
+instagram_access_token = '2372162651.d4daff6.d6c91752b4914a8da6e01a85747ae89e',</code></pre>
+                    
+                    <p>To get your user ID go to <a href="http://jelled.com/instagram/lookup-user-id">http://jelled.com/instagram/lookup-user-id</a> or <a href="http://www.otzberg.net/iguserid/">http://www.otzberg.net/iguserid/</a> and enter your Instagram username.</p>
+                    <p>To obtain an Access Token first you need to get a Client ID. Go to <a href="https://instagram.com/developer/">Instagram Developer</a> page and log in. Click on <strong>Register your application</strong>. If this is your first application, register as developer by filling the information asked, accept the API terms of use and brand guidelines and click <strong>Sign up</strong> button. Click <strong>Register your Application</strong> again to proceed and then click <strong>Register a New Client</strong> at the top right. Set application name to your website name, type in a description, add the url of your site in the "Website URL" and "Valid redirect URIs" fields and enter your email. Click "Security" tab and uncheck the box "Disable implicit OAuth". Hit register.</p>
+                    <p>Now, paste the following url into your web browser. Be sure to replace CLIENT-ID and REDIRECT-URI with your Client ID and Redirect URI you received when you registered your application in the previous step.</p>
+<pre><code>https://api.instagram.com/oauth/authorize/?client_id=CLIENT-ID&redirect_uri=REDIRECT-URI&response_type=token</code></pre>
+                    <p>Hit enter, and you will connect to Instagram's servers. Instagram will ask you whether you want to grant the client you registered access to your account. Once your client has been granted access to your account, Instagram will redirect you to your Redirect URI with the access_token in the url fragment. It will look like this:</p>
+<pre><code>http://your-redirect-uri#access_token=ACCESS-TOKEN</code></pre>
+                    <p>Simply grab the access_token off the URL fragment and add it to the default.hbs file.</p>                    
+
+                    <h4>Tag Cloud Widget</h4>
+
+                    <p>There is currently no way to create a tag cloud in Ghost. So for now we've implemented a temporary solution - the tag cloud is generated automatically from the RSS feed.</p>
+
+                    <p><strong>Important!</strong> You should leave the default, automatically generated, URL for the tag (in the Tag Settings). If you change it, the tag link will become broken.</p>                    
+
+                    <h3 id="SocialMediaLinks">12. Social Media Links (Footer)</h3>
+
+                    <p>The social media icons/links in the footer can be altered within the <strong>footer.hbs</strong> partial within the <strong>partials</strong> folder <strong>(Ghost/content/themes/curious/partials)</strong> of the theme.</p>
+                    <p>You may use any of the following social icons:</p>
+
+                    <div class="row">
+                        <div class="one-third"><span class="icon icon-twitter"></span> icon-twitter</div>
+                        <div class="one-third"><span class="icon icon-facebook"></span> icon-facebook</div>
+                        <div class="one-third"><span class="icon icon-github"></span> icon-github</div>
+                    </div>
+                    <div class="row">
+                        <div class="one-third"><span class="icon icon-feed"></span> icon-feed</div>
+                        <div class="one-third"><span class="icon icon-google"></span> icon-google</div>
+                        <div class="one-third"><span class="icon icon-envelope"></span> icon-envelope</div>
+                    </div>
+                    <div class="row">
+                        <div class="one-third"><span class="icon icon-linkedin"></span> icon-linkedin</div>
+                        <div class="one-third"><span class="icon icon-xing"></span> icon-xing</div>
+                        <div class="one-third"><span class="icon icon-youtube"></span> icon-youtube</div>
+                    </div>
+                     <div class="row">
+                        <div class="one-third"><span class="icon icon-dropbox"></span> icon-dropbox</div>
+                        <div class="one-third"><span class="icon icon-stack-overflow"></span> icon-stack-overflow</div>
+                        <div class="one-third"><span class="icon icon-instagram"></span> icon-instagram</div>
+                    </div>
+                     <div class="row">
+                        <div class="one-third"><span class="icon icon-flickr"></span> icon-flickr</div>
+                        <div class="one-third"><span class="icon icon-tumblr"></span> icon-tumblr</div>
+                        <div class="one-third"><span class="icon icon-dribbble"></span> icon-dribbble</div>
+                    </div>
+                     <div class="row">
+                        <div class="one-third"><span class="icon icon-behance"></span> icon-behance</div>
+                        <div class="one-third"><span class="icon icon-soundcloud"></span> icon-soundcloud</div>
+                        <div class="one-third"><span class="icon icon-vine"></span> icon-vine</div>
+                    </div>
+                    <div class="row">
+                        <div class="one-third"><span class="icon icon-codepen"></span> icon-codepen</div>
+                        <div class="one-third"><span class="icon icon-pinterest"></span> icon-pinterest</div>
+                        <div class="one-third"><span class="icon icon-medium"></span> icon-medium</div>
+                    </div>
+                    <div class="row">
+                        <div class="one-third"><span class="icon icon-500px"></span> icon-500px</div>
+                        <div class="one-third"><span class="icon icon-vimeo"></span> icon-vimeo</div>
+                        <div class="one-third"><span class="icon icon-mixcloud"></span> icon-mixcloud</div>
+                    </div>
+
+                    <p>Ghost added Facebook and Twitter support in version 0.8.0. You can add the links to your Facebook and Twitter profiles in the Ghost admin dashboard.</p>
+
+                    <h3 id="CopyrightInformation">13. Copyright Information (Footer)</h3>
+
+                    <p>You will find all copyright information in the <strong>&lt;div&gt;</strong> with the class <strong>"site-info"</strong> in the <strong>footer.hbs</strong> file within the <strong>partials</strong> folder <strong>(Ghost/content/themes/curious/partials)</strong> of the theme.</p>
+
+                    <h3 id="GoogleAnalytics">14. Google Analytics</h3>
+
+                    <p>Requires an account, which can be obtained for free at <a href="http://analytics.google.com">http://analytics.google.com</a>. To enable Google Analytics, you need to copy and paste the Google Analytics tracking code into the <strong>default.hbs</strong> inside the <strong>&lt;head&gt;</strong> tag, just below the <strong>{{ghost_head}}</strong> and above <strong>&lt;/head&gt;</strong>.</p>
+
+                    <hr />
+                </section>
+
+                <section>
+                    <h2 id="Support">D. Support - <a href="#toc">top</a></h2>
+                    <p>The documentation included provides all the information needed to get the theme installed and customized. However, if you have any questions you can email us at justgoodthemes@gmail.com, and we will be happy to help you.</p>
+                    <p>If you have any bug reports, or feature requests, please let us know!</p>
+
+                    <hr />
+                </section>
+
+                <section>
+                    <h2 id="Updates">E. Updates - <a href="#toc">top</a></h2>
+                    <p>As Ghost platform grows, so will this theme. We’re dedicated to keeping our <strong>Curious</strong> up to date.</p>
+                    <hr />
+                </section>
+
+                <section>
+                    <h2 id="Credits">F. Credits - <a href="#toc">top</a></h2>
+                    <p>We have used the following scripts, fonts or other files as listed.</p>
+                    <ul>
+                        <li>Montserrat font: <a href="https://www.google.com/fonts/specimen/Montserrat">https://www.google.com/fonts/specimen/Montserrat</a></li>
+                        <li>Droid Serif font: <a href="https://www.google.com/fonts/specimen/Droid+Serif">https://www.google.com/fonts/specimen/Droid+Serif</a></li>
+                        <li>Font Awesome icons: <a href=" http://fontawesome.io"> http://fontawesome.io</a></li>
+                        <li>FitVids plugin: <a href="http://fitvidsjs.com/">http://fitvidsjs.com/</a></li>
+                        <li>Rainbow plugin: <a href="https://craig.is/making/rainbows">https://craig.is/making/rainbows</a></li>
+                        <li>Instafeed.js plugin: <a href="http://instafeedjs.com/">http://instafeedjs.com/</a></li>
+                        <li>Reading Time plugin: <a href="https://github.com/michael-lynch/reading-time">https://github.com/michael-lynch/reading-time</a></li>
+                    </ul>
+                    <hr />
+                </section>
+
+                <p><a href="#toc">Go To Table of Contents</a></p>
+            </div><!-- #content -->
+        </div><!-- #main -->
+        <footer class="site-info" role="contentinfo">
+            <p>© 2015 Just Good Themes. All rights reserved.</p>
+        </footer><!-- .site-info -->
+    </div><!-- .wrap -->
+</body>
+</html>
